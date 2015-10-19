@@ -10,7 +10,7 @@
 
 # ### Baseline Setup
 _ = require('underscore')
-exports ?= window or this
+exports = window or this
 
 # Cafe au Life is based on two very simple classes:
 #

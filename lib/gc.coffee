@@ -33,7 +33,7 @@
 # ### Baseline Setup
 _ = require('underscore')
 {YouAreDaChef} = require('YouAreDaChef')
-exports ?= window or this
+exports = window or this
 
 exports.mixInto = ({Square, Cell}) ->
 

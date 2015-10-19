@@ -11,7 +11,7 @@
 
 # ### Baseline Setup
 _ = require('underscore')
-exports ?= window or this
+exports = window or this
 
 # ### Setting the rules for this game's "Universe"
 #

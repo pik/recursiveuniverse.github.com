@@ -23,7 +23,7 @@
 # ### Baseline Setup
 _ = require('underscore')
 {YouAreDaChef} = require('YouAreDaChef')
-exports ?= window or this
+exports = window or this
 
 # ### Implementing the cache
 #

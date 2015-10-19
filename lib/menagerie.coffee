@@ -5,7 +5,7 @@
 # The Menagerie Module mixes common objects from the Conway's Life Universe. It's not automatically loaded.
 
 _ = require('underscore')
-exports ?= window or this
+exports = window or this
 
 Life = require('./cafeaulife').set_universe_rules()
 
