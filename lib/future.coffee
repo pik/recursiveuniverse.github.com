@@ -46,7 +46,7 @@ dfunc = (dictionary) ->
       a[i]
     , dictionary
 
-exports.mixInto = (life) ->
+export mixInto = (life) ->
 
   rule = (current_state, neighbour_count) -> throw 'call set_universe_rules(...) first'
 
@@ -68,10 +68,15 @@ exports.mixInto = (life) ->
 
     @succ: (cells, row, col) ->
       current_state = cells[row][col]
-      neighbour_count = cells[row-1][col-1] + cells[row-1][col] +
-        cells[row-1][col+1] + cells[row][col-1] +
-        cells[row][col+1] + cells[row+1][col-1] +
-        cells[row+1][col] + cells[row+1][col+1]
+      neighbour_count =
+        cells[row-1][col-1] +
+        cells[row-1][col] +
+        cells[row-1][col+1] +
+        cells[row][col-1] +
+        cells[row][col+1] +
+        cells[row+1][col-1] +
+        cells[row+1][col] +
+        cells[row+1][col+1]
       rule(current_state, neighbour_count)
 
     result: ->
